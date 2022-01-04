@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do it! 자바스크립트 + 제이쿼리 입문</title>
+</head>
+<body>
+    <h1>적정 체중 계산</h1>
+    <script>
+        var name = prompt("이름을 입력하시오")
+        var height = prompt("신장을 입력하시오");
+        var weight = prompt("몸무게를 입력하시오");
+        var normal_w = (height-100) * 0.9;
+        // if(sw - 5 < weight && weight < sw + 5){
+        //     document.write(name,"님은 적정 체중입니다.")
+        // }else{
+        //     document.write(name,"님은 적정 체중이 아닙니다.")
+        // }
+        var result = weight >= normal_w -5 && weight <= normal_w +5;
+        result = result?"적정 체중입니다.":"적정 체중이 아닙니다.";
+        document.write(name + "님은 " + result);
+
+    </script>
+</body>
+</html>
