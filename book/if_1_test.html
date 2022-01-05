@@ -17,7 +17,15 @@
 
         var min = prompt("당신의 하루 통화량은 몇 분인가요?","0");
         if(min >= 60) {document.write("많이 사용하는 편이네요.", "<br>");}
-        document.write("==========The End=========")
+        document.write("==========The End=========", "<br>")
+
+        var yourNumber = prompt("좋아하는 숫자를 입력하시오.");
+
+        var num = yourNumber % 2;
+
+        if(num){
+            document.write("당신이 좋아하는 숫자는 홀수입니다.");
+        }else{document.write("당신이 좋아하는 숫자는 짝수입니다.");}
     </script>
 </body>
 </html>
