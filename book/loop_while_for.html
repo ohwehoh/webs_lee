@@ -13,8 +13,18 @@
         .red {
             color: red;
         }
+        
+        .green {
+            color: green;
+        }
+
+        .aqua {
+            color: aqua;
+        }
+
         p {
             margin: 0;
+            display: inline;
         }
     </style>
 </head>
@@ -65,11 +75,23 @@
 
         { // for문
             document.write("**for문으로 반복1~반복10출력하기**", "<br>");
-            for( var i = 1; i<10; i++){
+            for( var i = 1; i <= 10; i++){
                 document.write("반복", i, "<br>");
             }
             document.write("==========The End==========", "<br><br>");
 
+            document.write("**for문으로 1부터 100까지의 숫자 중 5의 배수는 빨간색, 7의 배수는 초록색, 공배수는 아쿠아색으로 출력하기**", "<br>");
+            for(var i = 1; i <= 100; i++){
+                if(i % 5 == 0 && i % 7 == 0){
+                    document.write("<p class='aqua'>" + i);
+                }else if (i % 5 == 0){
+                    document.write("<p class='red'>" + i);
+                }else if (i % 7 == 0){
+                    document.write("<p class='green'>" + i);
+                }else{
+                    document.write("<p>" + i);
+                }
+            }
         }
     </script>
 </body>
